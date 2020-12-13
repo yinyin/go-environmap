@@ -39,3 +39,4 @@ Icon
 
 /apply_runtime_env
 /load_runtime_env
+/merge_envs
