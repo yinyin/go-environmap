@@ -1,0 +1,7 @@
+{
+	"SHELL": "/not/bin/sh",
+	"TERM": "json-term",
+	"HOME": "",
+	"TMPDIR": "${TMPDIR}",
+	"USER": "%USER"
+}
