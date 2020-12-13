@@ -30,6 +30,10 @@ func logEnvMap(subjectTitle string, envMap environmap.EnvironMap) {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		log.Print("Usage: ./merge_envs examples/env-1.json examples/env-2.json examples/env-3.json ...")
+		return
+	}
 	envMap := (environmap.EnvironMap)(loadMapJSON(os.Args[1]))
 	logEnvMap("base", envMap)
 	for _, f := range os.Args[2:] {

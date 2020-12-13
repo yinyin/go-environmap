@@ -31,6 +31,10 @@ func runApply(m map[string]string, fnShouldApply func(envKey, envValue string) (
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		log.Print("Usage: ./apply_runtime_env examples/runtime-env.json")
+		return
+	}
 	inputJSONFilePath := os.Args[1]
 	fp, err := os.Open(inputJSONFilePath)
 	if nil != err {
